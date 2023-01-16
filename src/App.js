@@ -1,12 +1,10 @@
-import HelloWorld from "./components/HelloWorld";
+import Landing from "./components/Landing";
 
 const App = () => {
-
     return (
-        //Remove the div code below.
-        <div style={{display: 'flex', flexDirection: 'column', height: '100vh', justifyContent: 'center', alignItems: 'center', backgroundColor: '#202233'}}>
-            <h1>React Template Canvas</h1>
-            <HelloWorld message='Hello World!'/>
+        <div className="App">
+            <h1>The Peanut Gallery</h1>
+            <Landing message='Enter'/>
         </div>
     );
 }
