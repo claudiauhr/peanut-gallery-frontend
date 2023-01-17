@@ -27,6 +27,19 @@ div.nav {
     display: flex;
     gap: 10px;
     min-height: 50px;
+    background-color:#202233;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--bright-green);
+    font-weight: bold;
+}
+a:hover {
+    text-decoration: none;
+    color:var(--bright-orange);
+    font-weight: bold;
 }
 
 
