@@ -1,6 +1,21 @@
+// importing Routes
+import { Routes, Route } from "react-router-dom";
+
+// importing pagescomponents
+import CreateTrivia from "../pages/CreateTrivia";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
+
+
 const Landing = (props) => {
     return (
-        <h3>{props.message}</h3>
+        <main>
+            <Routes>
+                <Route path="/games" element={CreateTrivia} />
+                <Route path="/login" element={Login} />
+                <Route path="/register" element={Register} />
+            </Routes>
+        </main>
     );
 }
 
