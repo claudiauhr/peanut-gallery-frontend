@@ -5,7 +5,7 @@ const StartGame = () => {
         <h1>Start Game</h1>
         <form action="/enterGame" method="PUT">
             <fieldset class="game-info">
-            <legend>Game Code</legend>
+            <legend>Enter Code Below</legend>
                 <label for = "gameCode">GAME CODE</label>
                 <input type="gameCode" id="gameCode"/>
             </fieldset>
