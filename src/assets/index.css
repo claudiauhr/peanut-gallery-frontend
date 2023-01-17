@@ -54,6 +54,22 @@ div.registration {
                 -1px 1px 10px #ddd;
   }
 
+  div.login {
+    width: 50%;
+    background-color:#202233;
+    border-radius: 0 10px 10px 0;
+    padding: 15px;
+    box-sizing: border-box;
+    min-width: 300px;
+    min-height: 450px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #ddd,
+                -1px -1px 10px #ddd,
+                1px -1px 10px #ddd,
+                -1px 1px 10px #ddd;
+  }
+
   fieldset {
     border: 1px solid #ccc;
     border-radius: 5px;
