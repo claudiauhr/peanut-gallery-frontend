@@ -9,7 +9,7 @@ const Header = () => {
             <div><Link to="/register">Register</Link></div>
             <div><Link to="/about">About and How-To's</Link></div>
         </div>
-    )
-}
+    );
+};
 
 export default Header;

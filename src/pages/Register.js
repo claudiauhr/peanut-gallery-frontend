@@ -9,9 +9,9 @@ function Register() {
           <form action="/register" method="POST">
                 <fieldset class="account-info">
                 <legend>Player Info</legend>
-                <label for ='username'>USERNAME</label>
+                <label for ="username">USERNAME</label>
                 <input type="text" id="username"/>
-                <label for ='password'>PASSWORD</label>
+                <label for ="password">PASSWORD</label>
                 <input type="password" id="password"/>
                 <label for = "email">E-MAIL</label>
                 <input type="email" id="email"/>
