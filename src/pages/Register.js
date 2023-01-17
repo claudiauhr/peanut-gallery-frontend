@@ -1,15 +1,26 @@
+import Header from "../components/Header";
+
 function Register() {
     return (
-        <form>
-            <label htmlFor="name">Full name</label>
-            <input type="name" placeholder="full name" />
-            <label htmlFor="email">email</label>
-            <input type="email" placeholder="email@email.com" id="email" name="email" />
-            <label htmlFor="password">password</label>
-            <input type="password" placeholder="********" id="password" name="password" />
-            <button>Register</button>
-        </form>
-    )
-}
+        <>
+        <Header />
+        <div class="registration">
+          <h1>Registration</h1>
+          <form action="/register" method="POST">
+                <fieldset class="account-info">
+                <legend>Player Info</legend>
+                <label for ='username'>USERNAME</label>
+                <input type="text" id="username"/>
+                <label for ='password'>PASSWORD</label>
+                <input type="password" id="password"/>
+                <label for = "email">E-MAIL</label>
+                <input type="email" id="email"/>
+                </fieldset>
+                <input type="submit" value="Register Now"/>
+          </form>
+        </div>
+        </>
+    );
+};
 
 export default Register;

@@ -6,16 +6,13 @@ import Register from "./pages/Register";
 
 const App = () => {
     return (
-        <div className="App">
-            <h1>The Peanut Gallery</h1>
             <Routes>
+                <Route path="/" element={<Landing />} />
                 <Route path="/games" element={<CreateTrivia/>} />
                 <Route path="/login" element={<Login/>} />
                 <Route path="/register" element={<Register/>} />
             </Routes>
-                <Landing message='Enter' />
-        </div>
     );
-}
+};
 
 export default App;

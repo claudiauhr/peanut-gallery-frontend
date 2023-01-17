@@ -1,9 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo:wght@100&family=Inconsolata&family=Lacquer&family=Montserrat+Alternates:wght@300&display=swap');
 
+:root {
+    --bright-orange: #F18963;
+    --light-orange: #f5ac91;
+    --bright-green: #A0BE73;
+    --light-green: #c6d8ab;
+    --purple: #B67D9A;
+}
+
 body {
     margin: auto;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     height: 100vh;
     justify-content: center;
     align-items: center;
@@ -14,3 +22,98 @@ h1, h3 {
     color: rgb(255, 255, 255);
     font-family: 'Montserrat Alternates', sans-serif;
 }
+
+div.nav {
+    display: flex;
+    gap: 10px;
+    min-height: 50px;
+}
+
+
+  /* .sidebar {
+    width: 50%;
+    background: var(--purple);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px 0 0 10px;
+  } */
+
+div.registration {
+    width: 50%;
+    background-color:#202233;
+    border-radius: 0 10px 10px 0;
+    padding: 15px;
+    box-sizing: border-box;
+    min-width: 300px;
+    min-height: 450px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #ddd,
+                -1px -1px 10px #ddd,
+                1px -1px 10px #ddd,
+                -1px 1px 10px #ddd;
+  }
+
+  div.login {
+    width: 50%;
+    background-color:#202233;
+    border-radius: 0 10px 10px 0;
+    padding: 15px;
+    box-sizing: border-box;
+    min-width: 300px;
+    min-height: 450px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #ddd,
+                -1px -1px 10px #ddd,
+                1px -1px 10px #ddd,
+                -1px 1px 10px #ddd;
+  }
+
+  fieldset {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+  }
+  legend {
+    padding: 0px 10px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 500;
+    color: var(--purple);
+    background-color:#202233;
+  }
+  label {
+    font-family:'Montserrat Alternates', sans-serif;
+    font-weight: 200;
+    color: var(--bright-orange);
+    display: block;
+  }
+  input {
+    width:100%;
+    margin:10px 0;
+    padding:10px;
+    box-sizing:border-box;
+    border:1px solid var(--light-green);
+    border-radius:5px;
+  }
+  input:focus {
+    outline:0;
+    border: 1px solid var(--purple);
+  }
+  input[type='submit'] {
+    width: 100%;
+    height: 50px;
+    background: var(--bright-orange);
+    box-shadow: 2px 2px var(--light-green);
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size:1.3em;
+    color:whitesmoke;
+    border:0px;
+    transition:0.2s ease-in-out;
+  }
+  input[type="submit"]:hover {
+    cursor: pointer;
+    background: var(--bright-green);
+    box-shadow: 2px 2px var(--light-orange);
+  }
