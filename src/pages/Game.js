@@ -3,7 +3,6 @@
 // import StartGame from "../components/StartGame";
 // import HostDisplay from "../components/HostDisplay";
 // import PlayerDisplay from "../components/PlayerDisplay";
-import { useState} from "react";
 
 import socketIO from 'socket.io-client';
 import JoinGame from '../components/JoinGame';
@@ -13,13 +12,20 @@ socket.on('user connect', (message) =>{
     console.log('connected');
 })
 
-function Game () {
-    const SERVER_URL = {
-        isLoggedIn: true
-        }
-    const fetch = (url) => {
-        return url;
-        }
+async getStatus () {
+    const SERVER_URL = fetch("api_url", {
+        method: "GET",
+        mode: "cors",
+        cache: "no-cache",
+        credentials: "same-origin",
+        headers: {
+            "Content-type": "application/json"
+        },
+        redirect: "follow",
+        referrerPolicy:"no-referrer",
+        });
+        this.setState({ users: await Response.json() });
+    }
     const results = fetch(SERVER_URL)
 
     console.log(results.isLoggedIn)
