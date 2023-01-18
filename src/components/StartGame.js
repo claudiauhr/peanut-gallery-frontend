@@ -1,8 +1,8 @@
 const StartGame = () => {
     return (
         <>
-        <div class="login">
-        <h1>Start Game</h1>
+        <div className="login">
+        <h2>Start Game</h2>
         <form action="/enterGame" method="PUT">
             <fieldset class="game-info">
             <legend>Enter Code Below</legend>

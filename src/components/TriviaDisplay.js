@@ -1,0 +1,1 @@
+//looping through array to produce question

@@ -4,10 +4,10 @@ function Register() {
     return (
         <>
         <Header />
-        <div class="registration">
-          <h1>Registration</h1>
+        <div className="registration">
+          <h2>Registration</h2>
           <form action="/register" method="POST">
-                <fieldset class="account-info">
+                <fieldset>
                 <legend>Player Info</legend>
                 <label for ='username'>USERNAME</label>
                 <input type="text" id="username"/>

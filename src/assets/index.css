@@ -18,9 +18,21 @@ body {
     background-color: #202233;
 }
 
-h1, h3 {
+h1 {
     color: rgb(255, 255, 255);
     font-family: 'Montserrat Alternates', sans-serif;
+    position:relative;
+    left: 35%;
+}
+
+h2 {
+  color: rgb(255, 255, 255);
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+h3 {
+  color: rgb(255, 255, 255);
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 div.nav {
@@ -65,6 +77,15 @@ div.registration {
                 -1px -1px 10px #ddd,
                 1px -1px 10px #ddd,
                 -1px 1px 10px #ddd;
+    -webkit-animation: glowing 2s ease-in-out infinite alternate;
+    -moz-animation: glowing 2s ease-in-out infinite alternate;
+    animation: glowing 2s ease-in-out infinite alternate;
+}
+    @keyframes glowing {
+    from {box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #f0f, 0 0 40px #0ff, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {box-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
   }
 
   div.login {
@@ -81,6 +102,9 @@ div.registration {
                 -1px -1px 10px #ddd,
                 1px -1px 10px #ddd,
                 -1px 1px 10px #ddd;
+    -webkit-animation: glowing 2s ease-in-out infinite alternate;
+    -moz-animation: glowing 2s ease-in-out infinite alternate;
+    animation: glowing 2s ease-in-out infinite alternate;
   }
 
   fieldset {

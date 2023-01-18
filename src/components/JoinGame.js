@@ -1,11 +1,10 @@
-const JoinGame = () => {
+function JoinGame () {
   return (
     <>
-
-    <div class="login">
-    <h1>Join Game</h1>
+    <div className="login">
+    <h2>Join Game</h2>
     <form action="/enterGame" method="PUT">
-        <fieldset class="game-info">
+        <fieldset>
         <legend>Enter Code Below</legend>
             <label for = "gameCode">GAME CODE</label>
             <input type="gameCode" id="gameCode"/>

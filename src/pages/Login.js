@@ -4,16 +4,16 @@ function Login() {
     return (
         <>
         <Header />
-        <div class="login">
-        <h1>Login</h1>
+        <div className="login">
+        <h2>Login</h2>
         <form action="/login" method="GET">
-            <fieldset class="login-info">
+        <fieldset>
             <legend>Email & Password</legend>
-            <label for = "email">E-MAIL</label>
+            <label htmlFor = "email">E-MAIL</label>
             <input type="email" id="email"/>
-            <label for ='password'>PASSWORD</label>
+            <label htmlFor ='password'>PASSWORD</label>
             <input type="password" id="password"/>
-            </fieldset>
+        </fieldset>
             <input type="submit" value="Login"/>
         </form>
         </div>
