@@ -10,11 +10,7 @@
 
 body {
     margin: auto;
-    /* display: flex;
-    flex-direction: column; */
     height: 100vh;
-    justify-content: center;
-    align-items: center;
     background-color: #202233;
 }
 
@@ -36,38 +32,14 @@ a {
     color: var(--bright-green);
     font-weight: bold;
 }
+
 a:hover {
     text-decoration: none;
     color:var(--bright-orange);
     font-weight: bold;
 }
 
-
-  /* .sidebar {
-    width: 50%;
-    background: var(--purple);
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 10px 0 0 10px;
-  } */
-
-div.registration {
-    width: 50%;
-    background-color:#202233;
-    border-radius: 0 10px 10px 0;
-    padding: 15px;
-    box-sizing: border-box;
-    min-width: 300px;
-    min-height: 450px;
-    margin: 50px auto;
-    border-radius: 10px;
-    box-shadow: 1px 1px 10px #ddd,
-                -1px -1px 10px #ddd,
-                1px -1px 10px #ddd,
-                -1px 1px 10px #ddd;
-  }
-
-  div.login {
+div.registration, div.login {
     width: 50%;
     background-color:#202233;
     border-radius: 0 10px 10px 0;
@@ -129,4 +101,16 @@ div.registration {
     cursor: pointer;
     background: var(--bright-green);
     box-shadow: 2px 2px var(--light-orange);
+  }
+
+  div.create-trivia-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .create-trivia-container > div {
+    min-width: 20rem;
   }
