@@ -9,16 +9,9 @@
     "dotenv": "^16.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-<<<<<<< HEAD
     "react-router-dom": "^6.7.0",
     "react-scripts": "5.0.1",
-    "uuid": "^9.0.0",
-=======
-    "react-router-dom": "^6.6.2",
-    "react-scripts": "5.0.1",
     "socket.io-client": "^4.5.4",
-    "uuidv4": "^6.2.13",
->>>>>>> 08aa532071f99ef9a38c733495fe871eda0f4962
     "web-vitals": "^3.1.1",
     "webpack": "^5.75.0"
   },
