@@ -52,10 +52,7 @@ a:hover {
     font-weight: bold;
 }
 
-<<<<<<< HEAD
 div.registration, div.login {
-=======
-div.registration {
     width: 50%;
     background-color:#202233;
     border-radius: 0 10px 10px 0;
@@ -81,7 +78,7 @@ div.registration {
   }
 
   div.login {
->>>>>>> 08aa532071f99ef9a38c733495fe871eda0f4962
+
     width: 50%;
     background-color:#202233;
     border-radius: 0 10px 10px 0;
@@ -153,7 +150,6 @@ div.registration {
     height: 50px;
     background: var(--bright-orange);
     box-shadow: 2px 2px var(--light-orange);
-<<<<<<< HEAD
   }
 
   div.create-trivia-container {
@@ -166,8 +162,6 @@ div.registration {
 
   .create-trivia-container > div {
     min-width: 20rem;
-  }
-=======
     font-family: 'Montserrat Alternates', sans-serif;
     font-size:1.3em;
     color:whitesmoke;
@@ -178,4 +172,3 @@ div.registration {
     box-shadow: 2px 2px var(--light-green);
   }
 
->>>>>>> 08aa532071f99ef9a38c733495fe871eda0f4962
