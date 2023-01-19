@@ -4,19 +4,19 @@ function Register() {
     return (
         <>
         <Header />
-        <div class="registration">
-          <h1>Registration</h1>
+        <div className="registration">
+          <h2>Registration</h2>
           <form action="/register" method="POST">
-                <fieldset class="account-info">
+                <fieldset>
                 <legend>Player Info</legend>
-                <label for ='username'>USERNAME</label>
-                <input type="text" id="username"/>
-                <label for ='password'>PASSWORD</label>
-                <input type="password" id="password"/>
-                <label for = "email">E-MAIL</label>
-                <input type="email" id="email"/>
+                <label htmlFor ="username">USERNAME</label>
+                <input type="text" name="username"/>
+                <label htmlFor ="password">PASSWORD</label>
+                <input type="password" name="password"/>
+                <label htmlFor = "email">E-MAIL</label>
+                <input type="email" name="email"/>
                 </fieldset>
-                <input type="submit" value="Register Now"/>
+                <input type="submit" value="REGISTER"/>
           </form>
         </div>
         </>
