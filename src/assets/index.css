@@ -14,14 +14,27 @@ body {
     background-color: #202233;
 }
 
-h1, h3 {
+h1 {
     color: rgb(255, 255, 255);
     font-family: 'Montserrat Alternates', sans-serif;
+    position:relative;
+    left: 35%;
+}
+
+h2 {
+  color: rgb(255, 255, 255);
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+h3 {
+  color: rgb(255, 255, 255);
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 div.nav {
+    margin: 10px;
     display: flex;
-    gap: 10px;
+    gap: 15px;
     min-height: 50px;
     background-color:#202233;
     font-family: 'Montserrat Alternates', sans-serif;
@@ -29,13 +42,13 @@ div.nav {
 
 a {
     text-decoration: none;
-    color: var(--bright-green);
+    color: var(--bright-orange);
     font-weight: bold;
 }
 
 a:hover {
     text-decoration: none;
-    color:var(--bright-orange);
+    color:var(--bright-green);
     font-weight: bold;
 }
 
@@ -53,10 +66,39 @@ div.registration, div.login {
                 -1px -1px 10px #ddd,
                 1px -1px 10px #ddd,
                 -1px 1px 10px #ddd;
+    -webkit-animation: glowing 2s ease-in-out infinite alternate;
+    -moz-animation: glowing 2s ease-in-out infinite alternate;
+    animation: glowing 2s ease-in-out infinite alternate;
+}
+    @keyframes glowing {
+    from {box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #f0f, 0 0 40px #0ff, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {box-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+
+  div.login {
+
+    width: 50%;
+    background-color:#202233;
+    border-radius: 0 10px 10px 0;
+    padding: 15px;
+    box-sizing: border-box;
+    min-width: 300px;
+    min-height: 450px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #ddd,
+                -1px -1px 10px #ddd,
+                1px -1px 10px #ddd,
+                -1px 1px 10px #ddd;
+    -webkit-animation: glowing 2s ease-in-out infinite alternate;
+    -moz-animation: glowing 2s ease-in-out infinite alternate;
+    animation: glowing 2s ease-in-out infinite alternate;
   }
 
   fieldset {
-    border: 1px solid #ccc;
+    border: 1px solid var(--purple);
     border-radius: 5px;
     padding: 20px;
     margin: 20px 0;
@@ -79,7 +121,7 @@ div.registration, div.login {
     margin:10px 0;
     padding:10px;
     box-sizing:border-box;
-    border:1px solid var(--light-green);
+    border:1px solid var(--light-orange);
     border-radius:5px;
   }
   input:focus {
@@ -90,7 +132,7 @@ div.registration, div.login {
     width: 100%;
     height: 50px;
     background: var(--bright-orange);
-    box-shadow: 2px 2px var(--light-green);
+    box-shadow: 2px 2px var(--light-orange);
     font-family: 'Montserrat Alternates', sans-serif;
     font-size:1.3em;
     color:whitesmoke;
@@ -100,6 +142,13 @@ div.registration, div.login {
   input[type="submit"]:hover {
     cursor: pointer;
     background: var(--bright-green);
+    box-shadow: 2px 2px var(--light-green);
+  }
+
+  button {
+    width: 100%;
+    height: 50px;
+    background: var(--bright-orange);
     box-shadow: 2px 2px var(--light-orange);
   }
 
@@ -113,4 +162,13 @@ div.registration, div.login {
 
   .create-trivia-container > div {
     min-width: 20rem;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size:1.3em;
+    color:whitesmoke;
+    border:0px;
+    transition:0.2s ease-in-out;
+    cursor: pointer;
+    background: var(--bright-green);
+    box-shadow: 2px 2px var(--light-green);
   }
+
