@@ -2,13 +2,7 @@ import Header from "../components/Header";
 import { useState } from 'react';
 
 function CreateTrivia() {
-  const [formQA, setFormQA] = useState([
-    {
-      question: "",
-      answer: [],
-      // id: uuid(),
-    },
-  ])
+const [arr, setArr] = useState([])
 const addTrivia = (e) => {
   e.preventDefault()
   fetch("http://localhost:4000/c/trivia", {
@@ -25,46 +19,49 @@ const addTrivia = (e) => {
 }).then ((data) => {
   console.log(data);
 }).catch((error) => {
-console.warn('Something went wrong.', error);
+  console.warn('Something went wrong.', error);
 })
 };
 
   // add new form field for adding answer
-  const addQuestion = (e) => {
-    e.preventDefault()
-    const newData = {
-      question: "",
-      answer: [],
-    }
-
-    // setFormQA([...formQA, newData]);
+    const addQuestion = (e) => {
+      e.preventDefault()
+      const question = {
+        question: document.getElementById('question').value,
+        answer: document.getElementById('answer').value,
+        incorrectAnswer: [
+          document.getElementById('ia1').value,
+          document.getElementById('ia2').value,
+          document.getElementById('ia3').value,
+        ],
+      }
+      triviaSet.push(question)
+      console.log(triviaSet)
+      setArr([...triviaSet])
   }
 
-  // create a function submit, event listener
+    const triviaSet = []
 
   return (
     <>
     <Header />
     <div className="login">
-      {formQA.map((form) => {
-        return (
-          <form className="/trivia/create" key={form.id} >
+          <form className="/trivia/create">
             <fieldset>
               <legend>Create Trivia</legend>
               <label htmlFor="question">QUESTION:</label>
-              <input type="text" name="question" />
-              <label htmlFor="answer">CORRECT ANSWER</label>
-              <input type="text" name="correctAnswer" />
-              <label htmlFor="answer">INCORRECT ANSWER</label>
-              <input type="text" name="incorrectAnswer" />
-              <label htmlFor="answer">INCORRECT ANSWER</label>
-              <input type="text" name="incorrectAnswer" />
-              <label htmlFor="answer">INCORRECT ANSWER</label>
-              <input type="text" name="incorrectAnswer" />
+              <input id="question" type="text" name="question" placeholder="Question" />
+              <label htmlFor="correctAnswer">CORRECT ANSWER</label>
+              <input id="answer" type="text" name="correctAnswer" placeholder="Answer"/>
+              <label htmlFor="incorrectAnswers">INCORRECT ANSWER</label>
+              <input id="ia1" type="text" name="incorrectAnswers" placeholder="Incorrect Answer 1" />
+              <label htmlFor="incorrectAnswers">INCORRECT ANSWER</label>
+              <input id="ia2" type="text" name="incorrectAnswers" placeholder="Incorrect Answer 2"/>
+              <label htmlFor="incorrectAnswers">INCORRECT ANSWER</label>
+              <input id="ia3"type="text" name="incorrectAnswers" placeholder="Incorrect Answer 3"/>
             </fieldset>
-              <button onClick={addQuestion}>Add Question</button>
+              <input type="submit" onClick={(e)=>addQuestion(e)} value="ADD QUESTION"/>
           </form>
-)})}
 </div>
       <div className="login">
         <form onSubmit={(event)=>addTrivia(event)} className="game_set">
@@ -82,9 +79,15 @@ console.warn('Something went wrong.', error);
           </div>
         </form>
       </div>
+      <div className="login">
+        {arr.map(question => {
+          return (
+            <span key={arr.indexOf(question)}>{question.question}</span>
+          )
+        })}
+      </div>
     </>
     );
   }
 
 export default CreateTrivia;
-
