@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid'
 // npm i uuid & npm i @types/uuid
@@ -65,3 +66,14 @@ function CreateTrivia() {
 }
 
 export default CreateTrivia;
+=======
+import React from 'react'
+
+const CreateTrivia = () => {
+  return (
+    <div>CreateTrivia</div>
+  )
+}
+
+export default CreateTrivia
+>>>>>>> 08aa532071f99ef9a38c733495fe871eda0f4962
