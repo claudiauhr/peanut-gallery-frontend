@@ -146,3 +146,19 @@ div.registration {
     background: var(--bright-green);
     box-shadow: 2px 2px var(--light-green);
   }
+
+  button {
+    width: 100%;
+    height: 50px;
+    background: var(--bright-orange);
+    box-shadow: 2px 2px var(--light-orange);
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size:1.3em;
+    color:whitesmoke;
+    border:0px;
+    transition:0.2s ease-in-out;
+    cursor: pointer;
+    background: var(--bright-green);
+    box-shadow: 2px 2px var(--light-green);
+  }
+
