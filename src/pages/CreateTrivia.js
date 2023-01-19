@@ -1,79 +1,90 @@
-<<<<<<< HEAD
+import Header from "../components/Header";
 import { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid'
-// npm i uuid & npm i @types/uuid
-
-import "./styles.css";
 
 function CreateTrivia() {
-    const [formQA, setFormQA] = useState([
-        {
-            question: "",
-            answer: "",
-            id: uuidv4(),
-        },
-    ])
-    // add new form field for adding answer
-    const addAnswer = () => {
-        let _formQA = [...formQA]
-        _formQA.push({
-            question: "",
-            answer: "",
-            id: uuidv4(),
-        })
-        setFormQA(_formQA)
+  const [formQA, setFormQA] = useState([
+    {
+      question: "",
+      answer: [],
+      // id: uuid(),
+    },
+  ])
+const addTrivia = (e) => {
+  e.preventDefault()
+  fetch("http://localhost:4000/c/trivia", {
+  method: 'POST',
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8'
+  },
+  body:JSON.stringify({}),
+}).then ((response) => {
+  if (response.ok) {
+    return response.json();
+  }
+    return Promise.reject(response);
+}).then ((data) => {
+  console.log(data);
+}).catch((error) => {
+console.warn('Something went wrong.', error);
+})
+};
+
+  // add new form field for adding answer
+  const addQuestion = (e) => {
+    e.preventDefault()
+    const newData = {
+      question: "",
+      answer: [],
     }
 
-    return (
+    // setFormQA([...formQA, newData]);
+  }
 
-        <div className="dynamic-form">
-            {formQA.map((form) => {
-                return (
-                    <form className="question_answer">
-                        <div>
+  // create a function submit, event listener
 
-                            <input type="text" name="question" />
-
-                            <input type="text" name="answer" />
-
-                            <input type="text" name="answer" />
-
-                            <input type="text" name="answer" />
-
-                            <input type="text" name="answer" />
-                            <button onClick={addAnswer} >+</button>
-                        </div>
-                    </form>
-                )
-            })}
-            <div className="create_trivia">
-                <form className="game_set">
-                    <div>
-                        <label for="trivia set">Title of Trivia Set</label>
-                        <input type="text" name="name" />
-                        <label for="tags">tags</label>
-                        <textarea name="text" cols="30" rows="10"></textarea>
-                        <label for="author">Author</label>
-                        <input type="text" name="author name" />
-
-                        <button>Add Game Set</button>
-                    </div>
-                </form>
-            </div>
-        </div>
+  return (
+    <>
+    <Header />
+    <div className="login">
+      {formQA.map((form) => {
+        return (
+          <form className="/trivia/create" key={form.id} >
+            <fieldset>
+              <legend>Create Trivia</legend>
+              <label htmlFor="question">QUESTION:</label>
+              <input type="text" name="question" />
+              <label htmlFor="answer">CORRECT ANSWER</label>
+              <input type="text" name="correctAnswer" />
+              <label htmlFor="answer">INCORRECT ANSWER</label>
+              <input type="text" name="incorrectAnswer" />
+              <label htmlFor="answer">INCORRECT ANSWER</label>
+              <input type="text" name="incorrectAnswer" />
+              <label htmlFor="answer">INCORRECT ANSWER</label>
+              <input type="text" name="incorrectAnswer" />
+            </fieldset>
+              <button onClick={addQuestion}>Add Question</button>
+          </form>
+)})}
+</div>
+      <div className="login">
+        <form onSubmit={(event)=>addTrivia(event)} className="game_set">
+          <div>
+            <fieldset>
+            <label htmlFor="trivia set">NAME YOUR TRIVIA</label>
+            <input type="text" name="name" />
+            <label htmlFor="tags">TAGS</label>
+            <textarea name="text" cols="30" rows="10"></textarea>
+            <label htmlFor="author">AUTHOR</label>
+            <input type="text" name="author name"/>
+            </fieldset>
+            {/* <button>Edit Dropdown</button> */}
+            <input type="submit" value="ADD TRIVIA SET"/>
+          </div>
+        </form>
+      </div>
+    </>
     );
->>>>>>> Stashed changes
-}
+  }
 
 export default CreateTrivia;
-=======
-import React from 'react'
 
-const CreateTrivia = () => {
-  return (
-    <div>CreateTrivia</div>
-  )
-}
-
-export default CreateTrivia
->>>>>>> 08aa532071f99ef9a38c733495fe871eda0f4962
