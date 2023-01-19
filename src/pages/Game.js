@@ -10,7 +10,11 @@
 // socket.on('user connect', (message) =>{
 //     console.log('connected');
 // })
-
+const Game = () => {
+    return (
+        <div>hello</div>
+    )
+}
 // const Game = () => {
 //     return (isLoggedIn ? <StartGame /> : <JoinGame />
 //     )
@@ -47,5 +51,5 @@
 //     //     return <HostDisplay />
 //     // }
 
-// export default Game;
+export default Game;
 
