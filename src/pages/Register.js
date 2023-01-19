@@ -9,14 +9,14 @@ function Register() {
           <form action="/register" method="POST">
                 <fieldset>
                 <legend>Player Info</legend>
-                <label for ="username">USERNAME</label>
-                <input type="text" id="username"/>
-                <label for ="password">PASSWORD</label>
-                <input type="password" id="password"/>
-                <label for = "email">E-MAIL</label>
-                <input type="email" id="email"/>
+                <label htmlFor ="username">USERNAME</label>
+                <input type="text" name="username"/>
+                <label htmlFor ="password">PASSWORD</label>
+                <input type="password" name="password"/>
+                <label htmlFor = "email">E-MAIL</label>
+                <input type="email" name="email"/>
                 </fieldset>
-                <input type="submit" value="Register Now"/>
+                <input type="submit" value="REGISTER"/>
           </form>
         </div>
         </>

@@ -9,10 +9,10 @@ function Login() {
         <form action="/login" method="GET">
         <fieldset>
             <legend>Email & Password</legend>
-            <label for = "username">USERNAME</label>
-            <input type="username" id="email"/>
-            <label for ='password'>PASSWORD</label>
-            <input type="password" id="password"/>
+            <label htmlFor = "username">USERNAME</label>
+            <input type="username" name="email"/>
+            <label htmlFor ='password'>PASSWORD</label>
+            <input type="password" name="password"/>
         </fieldset>
             <input type="submit" value="Login"/>
         </form>
