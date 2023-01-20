@@ -1,4 +1,6 @@
 import Header from "../components/Header";
+import LoginDisplay from "../components/LoginDisplay";
+import JoinGame from "../components/JoinGame"
 
 function Login() {
     return (
@@ -17,6 +19,9 @@ function Login() {
             <input type="submit" value="Login"/>
         </form>
         </div>
+        return (
+            isLoggedIn ? <LoginDisplay /> : <JoinGame />
+            )
         </>
     );
 };
