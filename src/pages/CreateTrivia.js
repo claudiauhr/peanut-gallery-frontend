@@ -50,15 +50,15 @@ const addTrivia = (e) => {
             <fieldset>
               <legend>Create Trivia</legend>
               <label htmlFor="question">QUESTION:</label>
-              <input id="question" type="text" name="question" placeholder="Question" />
+              <input id="question" type="text" name="question" placeholder="QUESTION" />
               <label htmlFor="correctAnswer">CORRECT ANSWER</label>
-              <input id="answer" type="text" name="correctAnswer" placeholder="Answer"/>
+              <input id="answer" type="text" name="correctAnswer" placeholder="ANSWER"/>
               <label htmlFor="incorrectAnswers">INCORRECT ANSWER</label>
-              <input id="ia1" type="text" name="incorrectAnswers" placeholder="Incorrect Answer 1" />
+              <input id="ia1" type="text" name="incorrectAnswers" placeholder="INCORRECT ANSWER 1" />
               <label htmlFor="incorrectAnswers">INCORRECT ANSWER</label>
-              <input id="ia2" type="text" name="incorrectAnswers" placeholder="Incorrect Answer 2"/>
+              <input id="ia2" type="text" name="incorrectAnswers" placeholder="INCORRECT ANSWER 2"/>
               <label htmlFor="incorrectAnswers">INCORRECT ANSWER</label>
-              <input id="ia3"type="text" name="incorrectAnswers" placeholder="Incorrect Answer 3"/>
+              <input id="ia3"type="text" name="incorrectAnswers" placeholder="INCORRECT ANSWER 3"/>
             </fieldset>
               <input type="submit" onClick={(e)=>addQuestion(e)} value="ADD QUESTION"/>
           </form>
@@ -67,12 +67,13 @@ const addTrivia = (e) => {
         <form onSubmit={(event)=>addTrivia(event)} className="game_set">
           <div>
             <fieldset>
-            <label htmlFor="trivia set">NAME YOUR TRIVIA</label>
-            <input type="text" name="name" />
+            <legend>Name Trivia</legend>
+            <label htmlFor="trivia set">NAME OF TRIVIA SET</label>
+            <input type="text" name="name" placeholder="TRIVIA SET NAME"/>
             <label htmlFor="tags">TAGS</label>
             <textarea name="text" cols="30" rows="10"></textarea>
             <label htmlFor="author">AUTHOR</label>
-            <input type="text" name="author name"/>
+            <input type="text" name="author name" placeholder="AUTHOR"/>
             </fieldset>
             {/* <button>Edit Dropdown</button> */}
             <input type="submit" value="ADD TRIVIA SET"/>
@@ -80,11 +81,14 @@ const addTrivia = (e) => {
         </form>
       </div>
       <div className="login">
+        <fieldset>
+        <legend>Previous Questions Entered</legend>
         {arr.map(question => {
           return (
             <span key={arr.indexOf(question)}>{question.question}</span>
           )
         })}
+        </fieldset>
       </div>
     </>
     );

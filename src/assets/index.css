@@ -55,6 +55,8 @@ a:hover {
 div.registration, div.login {
     width: 50%;
     background-color:#202233;
+    color: whitesmoke;
+    font-family: 'Montserrat Alternates', sans-serif;
     border-radius: 0 10px 10px 0;
     padding: 15px;
     box-sizing: border-box;
@@ -77,9 +79,10 @@ div.registration, div.login {
     }
   }
 
-  div.login {
+  /* div.login {
     width: 50%;
     background-color:#202233;
+    color: whitesmoke;
     border-radius: 0 10px 10px 0;
     padding: 15px;
     box-sizing: border-box;
@@ -94,7 +97,7 @@ div.registration, div.login {
     -webkit-animation: glowing 2s ease-in-out infinite alternate;
     -moz-animation: glowing 2s ease-in-out infinite alternate;
     animation: glowing 2s ease-in-out infinite alternate;
-  }
+  } */
 
   fieldset {
     border: 1px solid var(--purple);
