@@ -10,9 +10,9 @@ function Login() {
         <fieldset>
             <legend>Email & Password</legend>
             <label htmlFor = "username">USERNAME</label>
-            <input type="username" name="email"/>
+            <input type="username" name="email" placeholder="USERNAME"/>
             <label htmlFor ='password'>PASSWORD</label>
-            <input type="password" name="password"/>
+            <input type="password" name="password" placeholder="PASSWORD"/>
         </fieldset>
             <input type="submit" value="Login"/>
         </form>
