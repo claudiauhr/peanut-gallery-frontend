@@ -13,10 +13,10 @@ This app was designed to allow people from all over the world to join in the fun
 - Express
 - React.js
 - Git/Github - Github Pages for Hosting
-- Socket.io
 - Heroku & Netlify Deployment
+- Socket.io
 
-[![Technology Used](https://skillicons.dev/icons?i=html,css,javascript,mongodb,express,react,github,socket,heroku,netlify&theme=light)](https://skillicons.dev)
+[![Technology Used](https://skillicons.dev/icons?i=html,css,javascript,mongodb,express,react,github,heroku,netlify&theme=light)](https://skillicons.dev)
 
 ## Screenshots
 
