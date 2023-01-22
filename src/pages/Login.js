@@ -1,6 +1,6 @@
 import Header from "../components/Header";
-import LoginDisplay from "../components/LoginDisplay";
-import JoinGame from "../components/JoinGame"
+// import LoginDisplay from "../components/LoginDisplay";
+// import JoinGame from "../components/JoinGame"
 
 function Login() {
     return (
@@ -10,7 +10,7 @@ function Login() {
         <h2>Login</h2>
         <form action="/login" method="GET">
         <fieldset>
-            <legend>Email & Password</legend>
+            <legend>Username & Password</legend>
             <label htmlFor = "username">USERNAME</label>
             <input type="username" name="email" placeholder="USERNAME"/>
             <label htmlFor ='password'>PASSWORD</label>
@@ -19,9 +19,7 @@ function Login() {
             <input type="submit" value="Login"/>
         </form>
         </div>
-        return (
-            isLoggedIn ? <LoginDisplay /> : <JoinGame />
-            )
+        {/* return (isLoggedIn ? <LoginDisplay /> : <JoinGame />) */}
         </>
     );
 };
