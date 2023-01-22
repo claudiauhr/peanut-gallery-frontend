@@ -38,7 +38,6 @@ const Display = (props) => {
     console.log(triviaSet)
 
     if (triviaSet) {
-        )
     } else {
         return (
             <div>
@@ -48,9 +47,8 @@ const Display = (props) => {
             </div>
         )
     }
-}
 
-    return (
+return (
         <div className="login">
         <h2>Choose which trivia set you wish to play</h2>
             <fieldset>

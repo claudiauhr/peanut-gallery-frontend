@@ -1,6 +1,6 @@
 import Header from '../components/Header';
 // import LoginDisplay from "../components/LoginDisplay";
-import JoinGame from '../components/JoinGame';
+// import JoinGame from '../components/JoinGame';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
