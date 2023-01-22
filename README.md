@@ -20,8 +20,13 @@ This app was designed to allow people from all over the world to join in the fun
 
 ## Screenshots
 
-![wireframe]()
-![production version]()
+![wireframe](../peanut-gallery-frontend/src/assets/images/SSWF1.png)
+![wireframe](../peanut-gallery-frontend/src/assets/images/SSWF2.png)
+![production version home](../peanut-gallery-frontend/src/assets/images/SShowto.png.png)
+![production version login](../peanut-gallery-frontend/src/assets/images/SSlogin.png)
+![production version register](../peanut-gallery-frontend/src/assets/images/SSregister.png)
+![production version create](../peanut-gallery-frontend/src/assets/images/SScreate.png)
+![production version join](../peanut-gallery-frontend/src/assets/images/SSJoinGame.png)
 
 ## Getting Started
 
@@ -29,10 +34,14 @@ This app was designed to allow people from all over the world to join in the fun
 
 ## Future Enhancements
 
-- Free
-- Ideas
+- The addition of games other than just trivia.
+- The addition of more players per game room. (Currently limited to 4 per room)
 - Here
 
 ## Acknowledgements
 
-## Contributors & Contact
+We would like to thank all of your friends and family for supporting this project. Especially considering the short window of time to produce. Many stressful evenings working through code would not be possible without your support!
+
+## Contributors
+
+Dustin Greyfield, Elaine Brossa, Claudia Uhr, Mickey Mangan
