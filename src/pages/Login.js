@@ -5,6 +5,19 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function Login() {
+	const navigate = useNavigate();
+	const loginForm = {
+		username: '',
+		password: '',
+	};
+	const [
+		form,
+		setForm,
+	] = useState(loginForm);
+	const handleChange = (e) => {
+		setForm({ ...form, [e.target.name]: e.target.value });
+	};
+
 	return (
 		<>
 			<Header />
@@ -14,9 +27,19 @@ function Login() {
 					<fieldset>
 						<legend>Email & Password</legend>
 						<label htmlFor='username'>USERNAME</label>
-						<input type='username' name='username' placeholder='USERNAME' />
+						<input
+							type='username'
+							name='username'
+							onChange={handleChange}
+							placeholder='USERNAME'
+						/>
 						<label htmlFor='password'>PASSWORD</label>
-						<input type='password' name='password' placeholder='PASSWORD' />
+						<input
+							type='password'
+							name='password'
+							onChange={handleChange}
+							placeholder='PASSWORD'
+						/>
 					</fieldset>
 					<input type='submit' value='Login' />
 				</form>
