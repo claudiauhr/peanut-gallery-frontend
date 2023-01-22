@@ -10,12 +10,28 @@ function Login() {
 		username: '',
 		password: '',
 	};
+
 	const [
 		form,
 		setForm,
 	] = useState(loginForm);
+
 	const handleChange = (e) => {
 		setForm({ ...form, [e.target.name]: e.target.value });
+	};
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		const checkAcct = async (credentials) => {
+			const URL = 'http://localhost:4000/r/login';
+			await fetch(URL, {
+				method: 'GET',
+				headers: { 'Content-Type': 'Application/JSON' },
+				body: JSON.stringify(credentials),
+			});
+		};
+		checkAcct(form);
+		navigate('/trivia/create');
 	};
 
 	return (
@@ -23,7 +39,7 @@ function Login() {
 			<Header />
 			<div className='login'>
 				<h2>Login</h2>
-				<form action='/login' method='GET'>
+				<form onSubmit={handleSubmit}>
 					<fieldset>
 						<legend>Email & Password</legend>
 						<label htmlFor='username'>USERNAME</label>
