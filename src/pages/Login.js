@@ -22,16 +22,25 @@ function Login() {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		const checkAcct = async (credentials) => {
-			const URL = 'https://peanutgallery.herokuapp.com/r/login';
-			await fetch(URL, {
-				method: 'GET',
+
+		const checkAcct = (async (credentials, callback) => {
+			const URL = 'http://localhost:4000/r/login';
+			const result = await fetch(URL, {
+				method: 'POST',
 				headers: { 'Content-Type': 'Application/JSON' },
 				body: JSON.stringify(credentials),
+
 			});
-		};
-		checkAcct(form);
-		navigate('/trivia/create');
+
+			callback(await result.json());
+		});
+
+		checkAcct(form, (result) => {
+
+			if (result.error) return;
+
+			navigate('/trivia/create');
+		});
 	};
 
 	return (
