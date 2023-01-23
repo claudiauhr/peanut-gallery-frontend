@@ -36,7 +36,6 @@ This app was designed to allow people from all over the world to join in the fun
 
 - The addition of games other than just trivia.
 - The addition of more players per game room. (Currently limited to 4 per room)
-- Here
 
 ## Acknowledgements
 
