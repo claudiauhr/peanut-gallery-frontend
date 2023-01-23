@@ -1,24 +1,29 @@
-// // import Header from "../components/Header";
+import Header from "../components/Header";
 // import StartGame from "../components/StartGame";
 // // import HostDisplay from "../components/HostDisplay";
 // // import PlayerDisplay from "../components/PlayerDisplay";
 // import { useState } from "react";
 // import socketIO from 'socket.io-client';
-// import JoinGame from '../components/JoinGame';
+import JoinGame from '../components/JoinGame';
 
-// const socket = socketIO.connect('http://localhost:4000');
+// const socket = socketIO.connect('https://peanutgallery.herokuapp.com/');
 // socket.on('user connect', (message) =>{
 //     console.log('connected');
 // })
-const Game = () => {
-    return (
-        <div>hello</div>
-    )
-}
 // const Game = () => {
-//     return (isLoggedIn ? <StartGame /> : <JoinGame />
+//     return (
+//         <div className="login">
+//             hello</div>
 //     )
 // }
+const Game = () => {
+    return (
+        <>
+        <Header />
+        <JoinGame />
+        </>
+    )
+}
 
 // const getStatus = async () => {
 //     const SERVER_URL = fetch("api_url", {

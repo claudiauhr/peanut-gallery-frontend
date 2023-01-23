@@ -3,15 +3,29 @@ const LoginDisplay = (e) => {
     return (
         <div className="login">
         <h2>Choose which trivia set you wish to play</h2>
-        <form action="http://localhost:4000/trivia" method="GET">
             <fieldset>
             <legend>Select Trivia Set</legend>
+            {triviaSet.questions.map(question => {
+            return (
+                <>
+                <p>{question.question}</p>
+                <p>{question.correctAnswer}</p>
+                {question.incorrectAnswers.map(answer => {
+                    return (
+                        <>
+                            <p>{answer}</p>
+                        </>
+                        )
+                    })}
+                </>
+            )
+        })}
                 <select name="title" id="triviaSet ID">
-                     titles.forEach(title => {
-                        <option>{triviaSet.title}</option>
-                     }); </select>
+                     {props.titles.forEach(title => {
+                        <option>{props.allTriviaSet.title}</option>
+                     })};
+                </select>
             </fieldset>
-        </form>
         </div>
     );
 };

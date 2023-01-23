@@ -21,7 +21,7 @@ function Register(props) {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		const newAcct = async (account) => {
-			const URL = 'http://localhost:4000/c/register';
+			const URL = 'https://peanutgallery.herokuapp.com/c/register';
 			await fetch(URL, {
 				method: 'POST',
 				headers: {
