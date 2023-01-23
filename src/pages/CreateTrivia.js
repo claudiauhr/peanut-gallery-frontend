@@ -10,7 +10,12 @@ const addTrivia = (e) => {
   headers: {
     'Content-type': 'application/json; charset=UTF-8'
   },
-  body:JSON.stringify({}),
+  body: JSON.stringify({
+    title: document.getElementById('trivia-set-name').value,
+    author: document.getElementById('trivia-set-author').value,
+    tags: document.getElementById('trivia-set-tags').value,
+    questions: arr
+  })
 }).then ((response) => {
   if (response.ok) {
     return response.json();
@@ -28,19 +33,20 @@ const addTrivia = (e) => {
       e.preventDefault()
       const question = {
         question: document.getElementById('question').value,
-        answer: document.getElementById('answer').value,
-        incorrectAnswer: [
+        correctAnswer: document.getElementById('answer').value,
+        incorrectAnswers: [
           document.getElementById('ia1').value,
           document.getElementById('ia2').value,
           document.getElementById('ia3').value,
         ],
       }
       triviaSet.push(question)
+      
       console.log(triviaSet)
-      setArr([...triviaSet])
+      setArr(triviaSet)
   }
 
-    const triviaSet = []
+    const triviaSet = [...arr]
 
   return (
     <>
@@ -69,11 +75,11 @@ const addTrivia = (e) => {
             <fieldset>
             <legend>Name Trivia</legend>
             <label htmlFor="trivia set">NAME OF TRIVIA SET</label>
-            <input type="text" name="name" placeholder="TRIVIA SET NAME"/>
+            <input id="trivia-set-name" type="text" name="name" placeholder="TRIVIA SET NAME"/>
             <label htmlFor="tags">TAGS</label>
-            <textarea name="text" cols="30" rows="10"></textarea>
+            <textarea id="trivia-set-tags" name="text" cols="30" rows="10"></textarea>
             <label htmlFor="author">AUTHOR</label>
-            <input type="text" name="author name" placeholder="AUTHOR"/>
+            <input id="trivia-set-author" type="text" name="author name" placeholder="AUTHOR"/>
             </fieldset>
             {/* <button>Edit Dropdown</button> */}
             <input type="submit" value="ADD TRIVIA SET"/>
@@ -85,7 +91,7 @@ const addTrivia = (e) => {
         <legend>Previous Questions Entered</legend>
         {arr.map(question => {
           return (
-            <span key={arr.indexOf(question)}>{question.question}</span>
+            <p key={arr.indexOf(question)}>{question.question}</p>
           )
         })}
         </fieldset>
