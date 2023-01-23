@@ -6,7 +6,7 @@ import Header from "../components/Header";
 // import socketIO from 'socket.io-client';
 import JoinGame from '../components/JoinGame';
 
-// const socket = socketIO.connect('http://localhost:4000');
+// const socket = socketIO.connect('https://peanutgallery.herokuapp.com/');
 // socket.on('user connect', (message) =>{
 //     console.log('connected');
 // })

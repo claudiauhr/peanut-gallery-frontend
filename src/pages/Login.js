@@ -23,7 +23,7 @@ function Login() {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		const checkAcct = async (credentials) => {
-			const URL = 'http://localhost:4000/r/login';
+			const URL = 'https://peanutgallery.herokuapp.com/r/login';
 			await fetch(URL, {
 				method: 'GET',
 				headers: { 'Content-Type': 'Application/JSON' },

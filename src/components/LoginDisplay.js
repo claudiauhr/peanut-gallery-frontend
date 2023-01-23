@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 // function LoginDisplay(props) {
 //     const [triviaSets, getTriviaSets] = useState('');
 
-//     const url = 'http://localhost:4000/r/trivia';
+//     const url = 'https://peanutgallery.herokuapp.com/r/trivia';
 
 //     useEffect(() => {
 //         getAllTriviaSets();

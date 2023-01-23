@@ -30,7 +30,7 @@ This app was designed to allow people from all over the world to join in the fun
 
 ## Getting Started
 
-[Click here](https://) to visit the deployed app!
+[Click here](https://thepeanutgallery.netlify.app/) to visit the deployed app!
 
 ## Future Enhancements
 
