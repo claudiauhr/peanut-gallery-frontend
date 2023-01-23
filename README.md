@@ -20,19 +20,27 @@ This app was designed to allow people from all over the world to join in the fun
 
 ## Screenshots
 
-![wireframe]()
-![production version]()
+![wireframe](/src/assets/images/SSWF1.png)
+![wireframe](/src/assets/images/SSWF2.png)
+![production version home](/src/assets/images/SShowto.png.png)
+![production version login](src/assets/images/SSlogin.png)
+![production version register](/src/assets/images/SSregister.png)
+![production version create](/src/assets/images/SScreate.png)
+![production version join](/src/assets/images/SSJoinGame.png)
 
 ## Getting Started
 
-[Click here](https://) to visit the deployed app!
+[Click here](https://thepeanutgallery.netlify.app/) to visit the deployed app!
 
 ## Future Enhancements
 
-- Free
-- Ideas
-- Here
+- The addition of games other than just trivia.
+- The addition of more players per game room. (Currently limited to 4 per room)
 
 ## Acknowledgements
 
-## Contributors & Contact
+We would like to thank all of your friends and family for supporting this project. Especially considering the short window of time to produce. Many stressful evenings working through code would not be possible without your support!
+
+## Contributors
+
+Dustin Greyfield, Elaine Brossa, Claudia Uhr, Mickey Mangan
