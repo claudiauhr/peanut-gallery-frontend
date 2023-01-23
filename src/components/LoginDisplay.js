@@ -1,4 +1,4 @@
-function LoginDisplay (e) => {
+const LoginDisplay = (e) => {
     e.preventDefault()
     return (
         <div className="login">
